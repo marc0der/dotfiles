@@ -1,0 +1,74 @@
+# gradle
+alias gw='./gradlew'
+alias gwcc='./gradlew clean check'
+
+#docker
+alias docker-killemall='docker rm -f $(docker ps -a -q)'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias ds='docker start'
+alias deit='docker exec -it'
+alias drmf='docker rm -f'
+
+#cargo
+alias cb='cargo build'
+alias cc='cargo clean'
+alias ct='cargo test'
+alias cf='cargo fmt'
+
+# some more ls aliases
+alias ll='ls -lah'
+alias la='ls -A'
+alias l='ls -CF'
+
+# rm
+alias trash='gio trash'
+
+# custom stuff
+alias i3config='vim ~/.config/regolith/i3/config'
+alias zshrc='vim ~/.zshrc'
+alias zshalias='vim ~/.zsh_aliases'
+alias pacman-deorphan='pkexec pacman -Rns $(pacman -Qtdq)'
+alias youtube-dl='youtube-dl -f bestvideo+bestaudio --merge-output-format mkv'
+
+#git
+alias ga="git add"
+alias gaa="git add ."
+alias gap="git add -p"
+alias gs="git status"
+alias gd="git diff"
+alias gdt="git difftool"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias gc="git commit --verbose"
+alias gcm='git commit -m --verbose'
+alias gca='git commit --amend --verbose'
+alias gcho='git checkout'
+alias gchom='git checkout main'
+alias gchob='git checkout -b'
+alias gpush='git push'
+alias gpusho='git push origin'
+alias gpushom='git push origin main'
+alias gpull='git pull'
+alias gpullo='git pull origin'
+alias gpullomain='git pull --rebase origin main'
+alias gpullomaster='git pull --rebase origin master'
+alias gfo='git fetch origin'
+alias gromain='git rebase origin/main'
+alias gromaster='git rebase origin/main'
+alias gstash='git stash push'
+alias gstasha='git stash apply'
+alias gstashp='git stash pop'
+alias gstashl='git stash list'
+
+#vim
+alias vi='vim'
+alias vim='nvim'
+alias suvi='pkexec nvim'
+alias nvimrc='vim ~/.config/nvim/init.lua'
+
+#misc
+alias path='echo $PATH | tr ":", "\n"'
+alias backup='pkexec /usr/local/bin/backup.sh'
+alias aura='sudo aura'
+alias awscfg='vim ~/.aws/config'
+

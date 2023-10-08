@@ -1,0 +1,56 @@
+function asciidoctor-view {
+  chromium --app="file://$(pwd)/$1" &> /dev/null  &
+}
+
+function mkcd {
+	mkdir $1;
+	cd $1
+}	
+
+function treeless {
+	tree $1 | less
+}
+
+function open {
+    xdg-open $1 &> /dev/null
+}
+
+function killport {
+	lsof -i TCP:$1 | grep LISTEN | awk '{print $2}' | xargs kill -9
+}
+
+function vied {
+	find . -name "$1" | xargs nvim
+}
+
+function sbt-deep-clean {
+	rm -rvf lib_managed target project/target project/project/target project/project/project/target project/project/project/project/target .bsp .bloop project/.bloop .metal
+}
+
+function scratch {
+	if [[ -z "$1" ]]; then
+		cd ~/scratch
+	else
+		mv -v "$1" $HOME/scratch
+	fi
+}
+
+# git
+
+function gpushob {
+	git push origin "$(git rev-parse --abbrev-ref HEAD)"
+}
+
+function gpushof {
+	git push -f origin "$(git rev-parse --abbrev-ref HEAD)"
+}
+
+function gitignore {
+  curl -s "https://www.toptal.com/developers/gitignore/api/$1" > .gitignore
+  echo "Generated .gitignore for $1"
+}
+
+function server-secret {
+	local service="$1"
+	aws secretsmanager get-secret-value --secret-id user-svcs-api-keys | jq -r ".SecretString | fromjson | .clientKeys.$service"
+}
