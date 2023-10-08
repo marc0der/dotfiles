@@ -1,0 +1,28 @@
+[user]
+	name = Marco Vermeulen
+	email = vermeulen.mp@gmail.com
+[includeIf "gitdir:~/src/siriusxm/"]
+	path = ~/src/siriusxm/.gitconfig
+[core]
+	autocrlf = input
+[merge]
+	tool = meld
+[mergetool]
+	prompt = true
+[mergetool "vimdiff"]
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+	tool = meld
+	path = /usr/bin/meld
+[pull]
+	rebase = true
+[commit]
+	template = ~/.gitmessage
+	gpgsign = true
+[credential]
+	helper = store
+[init]
+	defaultBranch = master
