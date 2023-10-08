@@ -10,7 +10,7 @@ export ZSH=$HOME/.oh-my-zsh
 export UPDATE_ZSH_DAYS=30
 CASE_SENSITIVE="false"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
-plugins=(kubectl fzf git docker docker-compose colorize scala sbt sudo aws autojump siriusxm-identity-omz)
+plugins=(fzf git docker docker-compose scala sbt sudo aws autojump)
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # path stuff
