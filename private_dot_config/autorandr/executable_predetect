@@ -1,0 +1,5 @@
+#!/bin/bash
+logger "autorandr invoke predect hook"
+sleep 2
+logger "autorandr completed predect hook"
+

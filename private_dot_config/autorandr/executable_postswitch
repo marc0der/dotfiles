@@ -1,0 +1,16 @@
+#!/bin/bash
+logger "autorandr invoke postswitch hook"
+logger "autorandr postswitch hook running as $UID:$GID ${whoami}"
+
+logger "autorandr display profile:" "$AUTORANDR_CURRENT_PROFILE"
+
+killall picom &> /dev/null
+killall dunst &> /dev/null
+killall rofication-daemon &> /dev/null
+
+regolith-look refresh
+
+notify-send -u low "Restart dunst"
+notify-send -u low -i display "Display profile" "$AUTORANDR_CURRENT_PROFILE"
+logger "autorandr display profile:" "$AUTORANDR_CURRENT_PROFILE"
+logger "autorandr completed postswitch hook"
