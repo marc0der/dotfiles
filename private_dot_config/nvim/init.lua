@@ -287,3 +287,4 @@ require'nvim-treesitter.configs'.setup {
 -- lsp config
 local lspconfig = require('lspconfig')
 lspconfig.smithy_ls.setup {}
+lspconfig.tsserver.setup {}
