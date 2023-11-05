@@ -40,8 +40,8 @@ P.S. You can delete this when you're done too. It's your config now :)
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+-- vim.g.mapleader = ' '
+-- vim.g.maplocalleader = ' '
 
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
@@ -410,56 +410,36 @@ vim.defer_fn(function()
 end, 0)
 
 -- Diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
-
--- [[ Configure LSP ]]
---  This function gets run when an LSP connects to a particular buffer.
-local on_attach = function(_, bufnr)
-  -- NOTE: Remember that lua is a real programming language, and as such it is possible
-  -- to define small helper and utility functions so you don't have to repeat yourself
-  -- many times.
-  --
-  -- In this case, we create a function that lets us more easily define mappings specific
-  -- for LSP related items. It sets the mode, buffer and description for us each time.
-  local nmap = function(keys, func, desc)
-    if desc then
-      desc = 'LSP: ' .. desc
-    end
-
-    vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
+local nmap = function(keys, func, desc)
+  if desc then
+    desc = 'LSP: ' .. desc
   end
 
-  nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
-  nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
-
-  nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
-  nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-  nmap('gi', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-  nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
-  nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
-  nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
-
-  -- See `:help K` for why this keymap
-  nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-  nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
-
-  -- Lesser used LSP functionality
-  nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
-  nmap('<leader>wa', vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd Folder')
-  nmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, '[W]orkspace [R]emove Folder')
-  nmap('<leader>ft', vim.lsp.buf.format, '[F]orma[T]')
-  nmap('<leader>wl', function()
-    print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-  end, '[W]orkspace [L]ist Folders')
-
-  -- Create a command `:Format` local to the LSP buffer
-  vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
-    vim.lsp.buf.format()
-  end, { desc = 'Format current buffer with LSP' })
+  vim.keymap.set('n', keys, func, { desc = desc })
 end
+
+nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
+nmap('gr', vim.lsp.buf.references, '[G]oto [R]eferences')
+nmap('gi', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
+nmap('gds', vim.lsp.buf.document_symbol, '[G]oto [D]ocument [Symbol]')
+nmap('gws', vim.lsp.buf.workspace_symbol, '[G]oto [W]orkspace [Symbol]')
+nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, '[D]efinition')
+nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
+nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
+nmap('<leader>ft', vim.lsp.buf.format, '[F]orma[T]')
+nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[N]ame')
+nmap('<leader>sh', vim.lsp.buf.signature_help, '[S]ignature [H]elp')
+nmap('<leader>ad', vim.diagnostic.setqflist, '[A]ll [D]iagnostics')
+-- nmap('<leader>ae', vim.diagnostic.setqflist({ severity = "E" }), '[A]ll [E]rrors')
+-- nmap('<leader>aw', vim.diagnostic.setqflist({ severity = "W" }), '[A]ll [W]arnings')
+-- nmap('<leader>nd', vim.diagnostic.goto_next({ wrap = false }), '[N]ext [D]iagnostic')
+-- nmap('<leader>pd', vim.diagnostic.goto_prev({ wrap = false }), '[P]revious [D]iagnostic')
+-- nmap('<leader>of', vim.diagnostic.open_float, '[O]pen [F]loat')
+
+-- See `:help K` for why this keymap
+nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
+nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
 -- document existing key chains
 require('which-key').register {
