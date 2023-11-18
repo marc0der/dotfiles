@@ -329,10 +329,10 @@ vim.keymap.set('n', '<leader>/', function()
     winblend = 10,
     previewer = false,
   })
-end, { desc = '[/] Fuzzily search in current buffer' })
+end, { desc = '[/] Fuzzily find in current buffer' })
 
-vim.keymap.set('n', '<leader>gf', require('telescope.builtin').git_files, { desc = 'Search [G]it [F]iles' })
 vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
+vim.keymap.set('n', '<leader>sG', require('telescope.builtin').git_files, { desc = '[S]earch [G]it files' })
 vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
@@ -409,10 +409,10 @@ vim.defer_fn(function()
   }
 end, 0)
 
--- Diagnostic keymaps
+-- LSP keymaps
 local nmap = function(keys, func, desc)
   if desc then
-    desc = 'LSP: ' .. desc
+    desc = desc .. ' (LSP)'
   end
 
   vim.keymap.set('n', keys, func, { desc = desc })
@@ -421,21 +421,21 @@ end
 nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
 nmap('gr', vim.lsp.buf.references, '[G]oto [R]eferences')
 nmap('gi', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
-nmap('gds', vim.lsp.buf.document_symbol, '[G]oto [D]ocument [Symbol]')
-nmap('gws', vim.lsp.buf.workspace_symbol, '[G]oto [W]orkspace [Symbol]')
-nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, '[D]efinition')
-nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
-nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+nmap('gsd', require('telescope.builtin').lsp_document_symbols, '[G]oto [S]ymbols [D]ocument')
+nmap('gsw', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[G]oto [S]ymbols [W]orkspace')
+
 nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
-nmap('<leader>ft', vim.lsp.buf.format, '[F]orma[T]')
-nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[N]ame')
-nmap('<leader>sh', vim.lsp.buf.signature_help, '[S]ignature [H]elp')
-nmap('<leader>ad', vim.diagnostic.setqflist, '[A]ll [D]iagnostics')
--- nmap('<leader>ae', vim.diagnostic.setqflist({ severity = "E" }), '[A]ll [E]rrors')
--- nmap('<leader>aw', vim.diagnostic.setqflist({ severity = "W" }), '[A]ll [W]arnings')
--- nmap('<leader>nd', vim.diagnostic.goto_next({ wrap = false }), '[N]ext [D]iagnostic')
--- nmap('<leader>pd', vim.diagnostic.goto_prev({ wrap = false }), '[P]revious [D]iagnostic')
--- nmap('<leader>of', vim.diagnostic.open_float, '[O]pen [F]loat')
+nmap('<leader>cd', vim.diagnostic.setqflist, '[C]ode [D]iagnostics')
+nmap('<leader>cf', vim.lsp.buf.format, '[C]ode [F]ormat')
+nmap('<leader>cr', vim.lsp.buf.rename, '[C]ode [R]ename')
+nmap('<leader>cs', vim.lsp.buf.signature_help, '[C]ode [S]ignature')
+
+-- vim.keymap.set('n', '<leader>de', vim.diagnostic.setqflist({ severity = "E" }), { desc = '[D]iagnostics [E]errors'})
+-- vim.keymap.set('n', '<leader>dw', vim.diagnostic.setqflist({ severity = "W" }), { desc = '[D]iagnostics [W]arnings'})
+-- vim.keymap.set('n', '<leader>dn', vim.diagnostic.setqflist({ severity = "W" }), { desc = '[D]iagnostics [W]arnings'})
+-- vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next({ wrap = false }), { desc = '[D]iagnostics [N]ext'})
+-- vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev({ wrap = false }), { desc = '[D]iagnostics [P]revious'})
+-- vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, { desc = '[D]iagnostics [F]loat'})
 
 -- See `:help K` for why this keymap
 nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
@@ -443,13 +443,10 @@ nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
 -- document existing key chains
 require('which-key').register {
+  ['g'] = { name = '[G]oto', _ = 'which_key_ignore' },
   ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-  ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-  ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
-  ['<leader>h'] = { name = 'More git', _ = 'which_key_ignore' },
-  ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
+  ['<leader>d'] = { name = '[D]iagnostics', _ = 'which_key_ignore' },
   ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-  ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
 }
 
 -- mason-lspconfig requires that these setup functions are called in this order
