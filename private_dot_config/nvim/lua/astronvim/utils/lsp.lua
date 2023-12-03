@@ -435,4 +435,27 @@ function M.config(server_name)
   return opts
 end
 
+-- FIXME: Metals keymap
+local nmap = function(keys, func, desc)
+  if desc then
+    desc = 'LSP: ' .. desc
+  end
+
+  vim.keymap.set('n', keys, func, { desc = desc })
+end
+
+nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
+nmap('gr', vim.lsp.buf.references, '[G]oto [R]eferences')
+nmap('gi', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
+nmap('gds', vim.lsp.buf.document_symbol, '[G]oto [D]ocument [Symbol]')
+nmap('gws', vim.lsp.buf.workspace_symbol, '[G]oto [W]orkspace [Symbol]')
+nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, '[D]efinition')
+nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
+nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
+nmap('<leader>ft', vim.lsp.buf.format, '[F]orma[T]')
+nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[N]ame')
+nmap('<leader>sh', vim.lsp.buf.signature_help, '[S]ignature [H]elp')
+nmap('<leader>ad', vim.diagnostic.setqflist, '[A]ll [D]iagnostics')
+
 return M

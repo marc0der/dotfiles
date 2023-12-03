@@ -332,6 +332,27 @@ autocmd({ "BufReadPost", "BufNewFile", "BufWritePost" }, {
   end,
 })
 
+-- Metals
+local metals_config = require("metals").bare_config()
+local nvim_metals_group = augroup("nvim-metals", { clear = true })
+
+metals_config.settings = {
+  showImplicitArguments = true,
+  excludedPackages = { "akka.actor.typed.javadsl", "com.github.swagger.akka.javadsl" },
+}
+
+metals_config.init_options.statusBarProvider = "on"
+
+-- Example if you are using cmp how to make sure the correct capabilities for snippets are set
+metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
+autocmd("FileType", {
+  pattern = { "scala", "sbt", "java" },
+  callback = function()
+    require("metals").initialize_or_attach(metals_config)
+  end,
+  group = nvim_metals_group,
+})
+
 cmd(
   "AstroChangelog",
   function() require("astronvim.utils.updater").changelog() end,

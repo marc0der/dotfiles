@@ -53,4 +53,17 @@ return function(_, _)
   else
     setup_servers()
   end
+
+  -- metals
+  local metals_config = require("metals").bare_config()
+
+  metals_config.settings = {
+    showImplicitArguments = true,
+    excludedPackages = { "akka.actor.typed.javadsl", "com.github.swagger.akka.javadsl" },
+  }
+
+  metals_config.init_options.statusBarProvider = "on"
+
+  -- Example if you are using cmp how to make sure the correct capabilities for snippets are set
+  metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
 end
