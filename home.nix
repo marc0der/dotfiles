@@ -46,7 +46,7 @@
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
+    "~/.config/sway/config".source = ./sway/config;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -86,7 +86,6 @@ source ${pkgs.autojump}/share/autojump/autojump.zsh
         #nix
         nix-home = "home-manager";
         nix-switch-flake = "nix-home switch --flake $HOME/dotfiles";
-        nix-conf = "nix-home edit";
         nix-gc = "nix-collect-garbage";
 
         # general
