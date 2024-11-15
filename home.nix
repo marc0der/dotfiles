@@ -3,14 +3,6 @@
 {
   home.username = "marco";
   home.homeDirectory = "/var/home/marco";
-
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
   home.stateVersion = "24.05";
 
   home.packages = with pkgs; [
@@ -31,13 +23,6 @@
     font-awesome
     jetbrains-mono
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" "Noto" ]; })
-
-    # # You can also create simple shell scripts directly inside your
-    # # configuration. For example, this adds a command 'my-hello' to your
-    # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
