@@ -8,6 +8,7 @@
   home.packages = with pkgs; [
     # packages
     autojump
+    bat
     borgbackup
     doctl
     fzf
