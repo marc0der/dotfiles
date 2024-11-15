@@ -27,6 +27,7 @@
   ];
 
   home.file = {
+    # sway
     ".config/sway/config".source = sway/config;
     ".config/sway/config.d/50-rules-browser.conf".source = sway/config.d/50-rules-browser.conf;
     ".config/sway/config.d/50-rules-pavucontrol.conf".source = sway/config.d/50-rules-pavucontrol.conf;
@@ -41,6 +42,10 @@
     ".config/sway/config.d/95-autostart-policykit-agent.conf".source = sway/config.d/95-xdg-desktop-autostart.conf;
     ".config/sway/config.d/95-xdg-desktop-autostart.conf".source = sway/config.d/95-xdg-user-dirs.conf;
     ".config/sway/config.d/95-xdg-user-dirs.conf".source = sway/config.d/95-xdg-user-dirs.conf;
+
+    #dunst
+    ".config/dunst/dunstrc".source = dunst/dunstrc;
+    ".config/dunst/open_link.sh".source = dunst/open_link.sh;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
