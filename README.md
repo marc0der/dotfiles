@@ -6,14 +6,14 @@ I run this over a [Fedora Atomic Desktop](https://fedoraproject.org/atomic-deskt
 
 ## Bootstrapping a new system
 
-* Install an atomic desktop on your system, in my case I prefer the [sway edition](https://fedoraproject.org/atomic-desktops/sway/).
-* Install Nix on the system:
+* Install an atomic desktop on your system. In my case, I prefer the [sway edition](https://fedoraproject.org/atomic-desktops/sway/).
+* Install the Nix package manager on the system:
 
 ```bash
-$ sh <(curl -L https://nixos.org/nix/install) –no-daemon
+$ sh <(curl -L https://nixos.org/nix/install) –daemon
 ```
 
-* Add nixpkgs and home-manager channels:
+* Add `nixpkgs` and `home-manager` channels:
 
 ```bash
 $ nix-channel --add https://nixos.org/channels/nixpkgs-unstable
