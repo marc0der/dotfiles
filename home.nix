@@ -43,15 +43,9 @@
     ".config/sway/config.d/95-xdg-desktop-autostart.conf".source = sway/config.d/95-xdg-user-dirs.conf;
     ".config/sway/config.d/95-xdg-user-dirs.conf".source = sway/config.d/95-xdg-user-dirs.conf;
 
-    #dunst
+    # dunst
     ".config/dunst/dunstrc".source = dunst/dunstrc;
     ".config/dunst/open_link.sh".source = dunst/open_link.sh;
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
   };
 
   home.sessionVariables = {
@@ -61,7 +55,6 @@
 
   home.sessionPath = ["$HOME/bin"];
 
-  # home.nix
   programs = {
     git = {
       enable = true;
