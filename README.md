@@ -1,8 +1,8 @@
 # Nix Home Manager Dotfiles
 
 This is my [Nix](https://nixos.org/) [home-manager](https://github.com/nix-community/home-manager) [dotfiles](https://dotfiles.github.io/) repository using a [flake](https://nixos.wiki/wiki/Flakes).
-
 I run this over a [Fedora Atomic Desktop](https://fedoraproject.org/atomic-desktops/), providing an immutable base for my system.
+I build [custom images](https://github.com/marc0der/atomic-sway) of the Sway variant using [Blue Build](https://blue-build.org/) to add and remove packages from the base image.
 
 ## Bootstrapping a new system
 
