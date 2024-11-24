@@ -27,6 +27,8 @@
     ".config/dunst/open_link.sh".source = dunst/open_link.sh;
   };
 
+  fonts.fontconfig.enable = true;
+
   home.sessionVariables = {
     EDITOR = "nvim";
     POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD = "true";
