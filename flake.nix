@@ -18,6 +18,7 @@
           modules = [
             ./common.nix
             ./xenomorph.nix
+            ./zsh.nix
           ];
         };
       };
