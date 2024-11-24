@@ -10,14 +10,21 @@
     fzf
     git
     htop
-    mpv-unwrapped
+    lazygit
+    mpv
     ncdu
+    nixfmt-rfc-style
     rclone
     rustup
+    speedtest-rs
+    wmctrl
+    yamllint
     zsh-powerlevel10k
 
     # fonts
     font-awesome
+    noto-fonts
+    noto-fonts-emoji
     jetbrains-mono
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" "Noto" ]; })
   ];
