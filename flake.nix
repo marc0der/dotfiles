@@ -19,6 +19,7 @@
             ./common.nix
             ./xenomorph.nix
             ./zsh.nix
+            ./git.nix
           ];
         };
       };
