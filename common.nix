@@ -21,6 +21,8 @@
     ".config/sway/config.d/95-autostart-policykit-agent.conf".source = sway/config.d/95-xdg-desktop-autostart.conf;
     ".config/sway/config.d/95-xdg-desktop-autostart.conf".source = sway/config.d/95-xdg-user-dirs.conf;
     ".config/sway/config.d/95-xdg-user-dirs.conf".source = sway/config.d/95-xdg-user-dirs.conf;
+    ".gnupg/gpg-agent.conf".source = gnupg/gpg-agent.conf;
+    ".gnupg/gpg.conf".source = gnupg/gpg.conf;
 
     # dunst
     ".config/dunst/dunstrc".source = dunst/dunstrc;
