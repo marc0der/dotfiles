@@ -13,7 +13,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       homeConfigurations = {
-        marco = home-manager.lib.homeManagerConfiguration {
+        "marco@xenomorph" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
             ./common.nix
@@ -22,6 +22,14 @@
             ./git.nix
           ];
         };
+        "marco@osiris" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./common.nix
+            ./osiris.nix
+            ./zsh.nix
+            ./git.nix
+          ];
+        };
       };
     };
-}
