@@ -14,6 +14,7 @@
     mpv
     ncdu
     nixfmt-rfc-style
+    pinentry
     rclone
     rustup
     speedtest-rs
