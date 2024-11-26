@@ -10,8 +10,7 @@
     ";
     shellAliases = {
       #nix
-      nix-home = "home-manager";
-      nix-switch-flake = "nix-home switch --flake $HOME/dotfiles";
+      nix-home = "home-manager --flake $HOME/dotfiles";
       nix-gc = "nix-collect-garbage";
 
       # general
