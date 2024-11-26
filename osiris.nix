@@ -19,6 +19,7 @@
     nixfmt-rfc-style
     nodejs_22
     okta-aws-cli
+    pinentry
     rclone
     speedtest-rs
     vscode
