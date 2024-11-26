@@ -5,6 +5,8 @@
   home.homeDirectory = "/var/home/marco";
   home.stateVersion = "24.05";
 
+  nixpkgs.config.allowUnfree = true;
+
   home.file = {
     # sway
     ".config/sway/config".source = sway/config;
