@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  home.file = {
+    ".p10k.zsh".source = powerline/p10k;
+  };
+
   programs.zsh = {
     enable = true;
     initExtra = "
