@@ -55,7 +55,6 @@
 
     # dunst
     ".config/dunst/dunstrc".source = dunst/dunstrc;
-    ".config/dunst/open_link.sh".source = dunst/open_link.sh;
 
     # waybar
     ".config/waybar/config.jsonc".source = waybar/config.jsonc;

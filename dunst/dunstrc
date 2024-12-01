@@ -88,8 +88,3 @@
     foreground = "#ffffff"
     frame_color = "#ff0000"
 
-[open_link]
-    appname = Brave
-    urgency = normal
-    script = "/home/marco/.config/dunst/open_link.sh"
-
