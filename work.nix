@@ -16,4 +16,9 @@
     vscode
     yt-dlp
   ];
+
+  home.file = {
+    ".local/share/applications/slack-equal-experts.desktop".source = desktop/slack-equal-experts.desktop;
+    ".local/share/applications/slack-siriusxm.desktop".source = desktop/slack-siriusxm.desktop;
+  };
 }
