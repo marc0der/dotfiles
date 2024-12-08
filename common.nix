@@ -22,6 +22,7 @@
     pinentry
     rclone
     speedtest-rs
+    vscode
     wmctrl
     yamllint
     zsh-powerlevel10k
