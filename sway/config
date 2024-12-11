@@ -89,7 +89,7 @@ input * xkb_layout "gb"
 # Basics:
 #
 # Start terminal
-bindsym $mod+Return exec flatpak run org.kde.konsole
+bindsym $mod+Return exec $term
 
 # File browser
 bindsym $mod+Shift+n exec flatpak run org.kde.dolphin
