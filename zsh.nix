@@ -33,7 +33,8 @@
       gcm = "git commit --message --verbose";
       gca = "git commit --amend --verbose";
       gpusho = "git push origin";
-      gpushof = "git push --force origin ";
+      gpushob = "git push --set-upstream origin";
+      gpushof = "git push --force origin";
       gpullo = "git pull --rebase origin";
       gfo = "git fetch origin";
       gr = "git rebase";
