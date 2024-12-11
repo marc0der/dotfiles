@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Discord
+Comment=Discord
+Exec=flatpak run com.brave.Browser --app="https://discord.com/channels/1245471991117512754/1245486255295299644" %U
+Icon=Discord
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Network;Application;
+StartupWMClass=discord
+Name[en_GB]=Discord

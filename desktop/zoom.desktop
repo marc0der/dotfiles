@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Zoom (Brave)
+Comment=Zoom Video Conference
+Exec=flatpak run com.brave.Browser --app="https://app.zoom.us/wc/home" %U
+Icon=Zoom
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Network;Application;
+StartupWMClass=zoom
+MimeType=x-scheme-handler/zoommtg;x-scheme-handler/zoomus;x-scheme-handler/tel;x-scheme-handler/callto;x-scheme-handler/zoomphonecall;x-scheme-handler/zoomphonesms;application/x-zoom
+X-KDE-Protocols=zoommtg;zoomus;tel;callto;zoomphonecall;zoomphonesms;
+Name[en_US]=Zoom

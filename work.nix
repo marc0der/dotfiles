@@ -20,5 +20,6 @@
   home.file = {
     ".local/share/applications/slack-equal-experts.desktop".source = desktop/slack-equal-experts.desktop;
     ".local/share/applications/slack-siriusxm.desktop".source = desktop/slack-siriusxm.desktop;
+    ".local/share/applications/zoom.desktop".source = desktop/zoom.desktop;
   };
 }

@@ -71,5 +71,9 @@
 
   home.sessionPath = ["$HOME/bin"];
 
+  home.file = {
+    ".local/share/applications/discord.desktop".source = desktop/discord.desktop;
+  };
+
   programs.home-manager.enable = true;
 }
