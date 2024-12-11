@@ -60,6 +60,9 @@
     # waybar
     ".config/waybar/config.jsonc".source = waybar/config.jsonc;
     ".config/waybar/style.css".source = waybar/style.css;
+
+    # foot
+    ".config/foot/foot.ini".source = foot/foot.ini;
   };
 
   fonts.fontconfig.enable = true;
