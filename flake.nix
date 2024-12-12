@@ -37,6 +37,7 @@
           modules = [
             ./common.nix
             ./git.nix
+            ./report.nix
             ./tycho-station.nix
             ./work.nix
             ./zsh.nix

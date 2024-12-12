@@ -74,6 +74,8 @@
 
   home.sessionPath = ["$HOME/bin"];
 
+  home.changes-report.enable = true;
+
   home.file = {
     ".local/share/applications/discord.desktop".source = desktop/discord.desktop;
   };
