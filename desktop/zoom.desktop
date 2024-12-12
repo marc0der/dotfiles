@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Zoom (Brave)
 Comment=Zoom Video Conference
-Exec=flatpak run com.brave.Browser --app="https://app.zoom.us/wc/home" %U
+Exec=brave-browser --app="https://app.zoom.us/wc/home" %U
 Icon=Zoom
 Terminal=false
 Type=Application

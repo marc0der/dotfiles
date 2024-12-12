@@ -3,7 +3,7 @@ Name=Slack SiriusXM
 StartupWMClass=Slack
 Comment=SyriusXM Slack
 GenericName=SiriusXM Slack in Brave
-Exec=flatpak run com.brave.Browser --app="https://app.slack.com/client/ENZ8SEUTX"
+Exec=brave-browser --app="https://app.slack.com/client/ENZ8SEUTX"
 Icon=slack
 Type=Application
 StartupNotify=true
