@@ -32,6 +32,16 @@
             ./zsh.nix
           ];
         };
+        "marco@tycho-station" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./common.nix
+            ./git.nix
+            ./tycho-station.nix
+            ./work.nix
+            ./zsh.nix
+          ];
+        };
       };
     };
 }
