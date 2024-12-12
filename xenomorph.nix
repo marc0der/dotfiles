@@ -5,4 +5,7 @@
     doctl
     rustup
   ];
+  home.file = {
+    ".config/sway/config".source = sway/config-xenomorph;
+  };
 }

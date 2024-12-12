@@ -37,7 +37,6 @@
 
   home.file = {
     # sway
-    ".config/sway/config".source = sway/config;
     ".config/sway/config.d/50-rules-browser.conf".source = sway/config.d/50-rules-browser.conf;
     ".config/sway/config.d/50-rules-pavucontrol.conf".source = sway/config.d/50-rules-pavucontrol.conf;
     ".config/sway/config.d/50-rules-policykit-agent.conf".source = sway/config.d/50-rules-policykit-agent.conf;
