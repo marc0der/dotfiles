@@ -15,6 +15,7 @@
     fzf
     git
     htop
+    httpie
     lazygit
     mpv
     ncdu
