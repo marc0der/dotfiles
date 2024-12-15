@@ -18,6 +18,7 @@
           modules = [
             ./common.nix
             ./git.nix
+            ./report.nix
             ./xenomorph.nix
             ./zsh.nix
           ];
@@ -28,6 +29,7 @@
             ./common.nix
             ./git.nix
             ./osiris.nix
+            ./report.nix
             ./work.nix
             ./zsh.nix
           ];
