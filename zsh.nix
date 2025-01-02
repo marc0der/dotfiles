@@ -55,7 +55,7 @@
     };
     oh-my-zsh = {
       enable = true;
-      plugins = [ "fzf" "git" "docker" "sudo" "aws" "doctl" ];
+      plugins = [ "fzf" "gh" "git" "docker" "sudo" "aws" "doctl" ];
       theme = "wezm+";
     };
   };
