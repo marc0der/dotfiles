@@ -13,6 +13,7 @@
     bat
     borgbackup
     fzf
+    gh
     git
     htop
     httpie
