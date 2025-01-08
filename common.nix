@@ -17,6 +17,7 @@
     git
     htop
     httpie
+    nodePackages.jsonlint
     lazygit
     mpv
     ncdu
