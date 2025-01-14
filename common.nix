@@ -21,6 +21,7 @@
     lazygit
     mpv
     ncdu
+    nmap
     nixfmt-rfc-style
     pinentry
     rclone
