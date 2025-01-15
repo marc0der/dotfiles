@@ -10,27 +10,29 @@ I build [custom images](https://github.com/marc0der/atomic-sway) of the Sway var
 * Install the Nix package manager on the system:
 
 ```bash
-$ sh <(curl -L https://nixos.org/nix/install) –daemon
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | \
+    sh -s -- install ostree --no-confirm --persistence=/var/lib/nix
+echo "Defaults  secure_path = /nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/default/sbin:$(sudo printenv PATH)" | sudo tee /etc/sudoers.d/nix-sudo-env
 ```
 
 * Add `nixpkgs` and `home-manager` channels:
 
 ```bash
-$ nix-channel --add https://nixos.org/channels/nixpkgs-unstable
-$ nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-$ nix-channel --update
+nix-channel --add https://nixos.org/channels/nixpkgs-unstable
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+nix-channel --update
 ```
 
 * Install `home-manager`:
 
 ```bash
-$ nix-shell '<home-manager>' -A install
+nix-shell '<home-manager>' -A install
 ```
 
 * Clone this repository, then run the following command from within the `dotfiles` directory:
 
 ```bash
-$ home-manager switch --flake .
+home-manager switch --flake .
 ```
 
 This will publish all the dotfiles to the `/nix` store and place symlinks to these files in your home directory.
