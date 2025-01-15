@@ -12,6 +12,7 @@
     autojump
     bat
     borgbackup
+    brave
     fzf
     gh
     git

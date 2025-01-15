@@ -3,7 +3,7 @@ Name=Slack Equal Experts
 StartupWMClass=Slack
 Comment=EE Slack
 GenericName=EE Slack in Brave
-Exec=flatpak run com.brave.Browser --enable-features=UseOzonePlatform --ozone-platform=wayland --app="https://app.slack.com/client/T02QA1EAG/C02UUE1B3R8"
+Exec=brave --enable-features=UseOzonePlatform --ozone-platform=wayland --app="https://app.slack.com/client/T02QA1EAG/C02UUE1B3R8"
 Icon=slack
 Type=Application
 StartupNotify=true
