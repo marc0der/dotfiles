@@ -53,9 +53,8 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 # output * bg /usr/share/backgrounds/default.png fill
 output * bg $HOME/.wallpaper.jpg fill
 
-bindsym $mod+n exec --no-startup-id exec $HOME/bin/next-wallpaper.sh
-bindsym $mod+p exec --no-startup-id exec $HOME/bin/previous-wallpaper.sh
-# exec $HOME/bin/next-wallpaper.sh
+bindsym $mod+n exec --no-startup-id $HOME/bin/next-wallpaper.sh
+bindsym $mod+p exec --no-startup-id $HOME/bin/previous-wallpaper.sh
 
 # Lock screen
 bindsym $mod+Escape exec --no-startup-id swaylock -f -c 000000
