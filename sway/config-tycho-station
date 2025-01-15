@@ -14,8 +14,8 @@ output eDP-1 disable
 xwayland enable
 
 # Set gaps around windows
-gaps inner 5
-gaps outer 5
+gaps inner 3
+gaps outer 3
 smart_borders on
 smart_gaps on
 
