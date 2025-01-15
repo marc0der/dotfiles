@@ -68,6 +68,10 @@
 
     # foot
     ".config/foot/foot.ini".source = foot/foot.ini;
+
+    # bin scripts
+    "bin/next-wallpaper.sh".source = bin/next-wallpaper.sh;
+    "bin/previous-wallpaper.sh".source = bin/previous-wallpaper.sh;
   };
 
   fonts.fontconfig.enable = true;
