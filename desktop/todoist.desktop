@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Todoist
+Comment=Todoist
+Exec=brave --enable-features=UseOzonePlatform --ozone-platform=wayland --app="https://app.todoist.com/app/filter/focus-2348004222" %U
+Icon=Todoist
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Network;Application;
+StartupWMClass=todoist
+Name[en_GB]=Todoist

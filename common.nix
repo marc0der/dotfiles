@@ -87,6 +87,7 @@
 
   home.file = {
     ".local/share/applications/discord.desktop".source = desktop/discord.desktop;
+    ".local/share/applications/todoist.desktop".source = desktop/todoist.desktop;
   };
 
   programs.home-manager.enable = true;
