@@ -1,0 +1,7 @@
+profile {
+    output eDP-1 position 0,0 scale 1.5
+}
+profile docked {
+    output eDP-1 disable
+    output "Dell Inc. DELL P2719H HFZNV13" enable
+}
