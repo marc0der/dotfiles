@@ -95,7 +95,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+n exec flatpak run org.kde.dolphin
 
 # Start browser
-bindsym $mod+Return+Shift exec flatpak run com.brave.Browser --enable-features=UseOzonePlatform --ozone-platform=wayland
+bindsym $mod+Return+Shift exec brave --enable-features=UseOzonePlatform --ozone-platform=wayland
 
 # Kill focused window
 bindsym $mod+Shift+q kill
