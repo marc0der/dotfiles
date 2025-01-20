@@ -56,7 +56,6 @@ set $screen_timout 300
 
 ### Input configurations
 
-#### Lenovo Carbon X1
 input "2:10:TPPS/2_Elan_TrackPoint" {
     dwt enabled
     tap enabled
