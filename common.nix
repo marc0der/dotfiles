@@ -68,7 +68,6 @@
 
     # kanshi
     ".config/systemd/user/kanshi.service".source = systemd/kanshi.service;
-    ".config/kanshi/config".source = kanshi/config;
 
     # foot
     ".config/foot/foot.ini".source = foot/foot.ini;
