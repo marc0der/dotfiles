@@ -3,5 +3,7 @@ profile {
 }
 profile docked {
     output eDP-1 disable
-    output "Dell Inc. DELL P2719H HFZNV13" enable
+    output "Dell Inc. DELL U3219Q 38RYXV2" enable
+    output "Dell Inc. DELL U3219Q 38RYXV2" scale 1 position 0,0 mode 3840x2160
+    output "Dell Inc. DELL U3219Q 38RYXV2" subpixel none
 }
