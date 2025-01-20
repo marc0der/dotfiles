@@ -1,16 +1,5 @@
 font pango: JetBrainsMono Nerd Font Regular 10
 
-# Set scale
-output DP-3 enable
-
-output DP-3 scale 1.1
-
-output DP-3 pos 0 0 res 3840x2160
-
-output DP-3 subpixel none
-
-output eDP-1 disable
-
 xwayland enable
 
 # Set gaps around windows
