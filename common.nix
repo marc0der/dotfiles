@@ -66,6 +66,9 @@
     ".config/waybar/config.jsonc".source = waybar/config.jsonc;
     ".config/waybar/style.css".source = waybar/style.css;
 
+    # kanshi
+    ".config/systemd/user/kanshi.service".source = systemd/kanshi.service;
+
     # foot
     ".config/foot/foot.ini".source = foot/foot.ini;
 
