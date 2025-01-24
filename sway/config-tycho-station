@@ -2,6 +2,8 @@ font pango: JetBrainsMono Nerd Font Regular 10
 
 xwayland enable
 
+output "Dell Inc. DELL U3219Q 38RYXV2" subpixel none
+
 # Set gaps around windows
 gaps inner 2
 gaps outer 2
@@ -243,5 +245,7 @@ bindsym $mod+r mode "resize"
 #
 
 # Create variables from Xresources for i3bars's look.
+
+exec_always /usr/bin/kanshictl reload
 
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
