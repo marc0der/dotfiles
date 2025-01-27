@@ -26,6 +26,7 @@
     nixfmt-rfc-style
     pinentry
     rclone
+    ripgrep
     speedtest-rs
     vscode
     wmctrl
