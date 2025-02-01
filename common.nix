@@ -60,6 +60,12 @@
     ".gnupg/gpg-agent.conf".source = gnupg/gpg-agent.conf;
     ".gnupg/gpg.conf".source = gnupg/gpg.conf;
 
+    # hyprland
+    # ".config/hypr/hyprland.conf".source = hypr/hyprland.conf;
+
+    # kitty
+    # ".config/kitty/kitty.conf".source = kitty/kitty.conf;
+
     # dunst
     ".config/dunst/dunstrc".source = dunst/dunstrc;
 
