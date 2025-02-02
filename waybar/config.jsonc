@@ -1,19 +1,17 @@
 // -*- mode: jsonc -*-
 {
     // "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "position": "top", // Waybar position (top|bottom|left|right)
     "height": 20, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "sway/workspaces",
-        "sway/mode",
-        "sway/scratchpad"
+        "hyprland/workspaces"
     ],
-    //"modules-center": [
-    //    "sway/window"
-    //],
+    "modules-center": [
+        "hyprland/window"
+    ],
     "modules-right": [
         "idle_inhibitor",
         "pulseaudio",
@@ -28,7 +26,7 @@
         "tray"
     ],
     //Modules configuration
-    "sway/workspaces": {
+    "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
@@ -39,7 +37,7 @@
             "3": "",
             "9": "",
             "urgent": "",
-            "focused": "",
+            "active": "",
             "default": ""
         }
     },
@@ -52,10 +50,10 @@
             "unlocked": ""
         }
     },
-    "sway/mode": {
+    "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
-    "sway/scratchpad": {
+    "hyprland/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
         "format-icons": ["", ""],
