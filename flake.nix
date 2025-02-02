@@ -25,7 +25,7 @@
             ./common.nix
             ./git.nix
             ./report.nix
-            # ./xenomorph.nix
+            ./xenomorph.nix
             ./zsh.nix
           ];
         };
